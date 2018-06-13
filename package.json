@@ -1,0 +1,35 @@
+{
+  "name": "apisound",
+  "version": "1.0.0",
+  "description": "backend Angular",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "~1.18.2",
+    "cloudinary": "^1.2.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "ejs": "^2.6.1",
+    "express": "~4.15.5",
+    "express-formidable": "^1.0.0",
+    "express-session": "^1.15.6",
+    "jade": "~1.11.0",
+    "jwt-simple": "^0.5.1",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.10",
+    "morgan": "~1.9.0",
+    "multer": "^0.1.8",
+    "nodemon": "^1.17.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "~2.4.5"
+  },
+  "author": "Juanfer",
+  "license": "ISC"
+}

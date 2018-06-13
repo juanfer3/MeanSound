@@ -1,0 +1,29 @@
+<h1>Artistas</h1>
+
+
+<mat-grid-list cols="3" rowHeight="3:4">
+  <!--grid-->
+  <mat-grid-tile *ngFor="let artista of artistas">
+
+    <!--Card Artist-->
+    <mat-card class="example-card" >
+      <mat-card-header>
+        <mat-card-title>{{artista.name}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{artista.image[3]['#text']}}" >
+
+      <mat-card-actions class="space_bet">
+          <button mat-menu-item>
+              <mat-icon>favorite_border</mat-icon>
+              <span>LIKE</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>question_answer</mat-icon>
+                <span>Comentarios</span>
+              </button>
+      </mat-card-actions>
+    </mat-card>
+
+  </mat-grid-tile>
+
+</mat-grid-list>    

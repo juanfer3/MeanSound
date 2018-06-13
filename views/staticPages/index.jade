@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')  
+    |   
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    |   
+    title Api Sound
+    
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", rel='stylesheet')
+ 
+    
+
+    link(rel="stylesheet", href="/css.css")
+    script.
+      history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', () =>
+          history.pushState(null, null, document.URL));
+
+  body
+    // Navigation
+    //include nav
+    .content-wrapper
+      block content 
+    
+    // Scroll to Top Button
+    a.scroll-to-top.rounded(href='#page-top')
+      i.fa.fa-angle-up
