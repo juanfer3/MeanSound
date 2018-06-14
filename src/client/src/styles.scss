@@ -6,15 +6,33 @@
 @import url(https://fonts.googleapis.com/icon?family=Roboto);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
+@import url(https://fonts.googleapis.com/css?family=Lekton|Montserrat);
 
+// Titles
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Montserrat', sans-serif;
+}
 
+//Body
 html, body {
   margin: 0px;
   padding: 0px;
 }
 body{
   background-color: #f0f0f0;
-  font-family: Roboto, 'Helvetice New', 'Arial', sans-serif
+  font-family: 'Lekton', sans-serif;
+}
+
+// Navbar
+md-tab-group {
+  background-color: pink;
+}
+.mat-tab-body-wrapper {
+  color: white;
+  background-color: red;
+}
+.mat-tab-label.mat-tab-label-active {
+  background-color: #3f51b5;
 }
 
 .spacer{
@@ -37,4 +55,32 @@ body{
   align-items: center;
 -webkit-flex-flow: row wrap;
 
+}
+
+
+
+// Buttons
+.mybtn-success{
+  background: #1EB980;
+  color: aliceblue;
+}
+
+.mybtn-danger{
+  background: red;
+  color: aliceblue;
+}
+
+.mybtn-warning{
+  background: #FFCF44;
+  color: black;
+}
+
+.mybtn-primary{
+  background: #2196F3;
+  color: black;
+}
+
+.my_navar{
+  background: black;
+  color: #1EB980;
 }

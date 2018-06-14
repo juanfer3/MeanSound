@@ -253,9 +253,15 @@ var ArtistasComponent = /** @class */ (function () {
         var _this = this;
         this.artist = artist;
         this.artistas = [];
+        // Api Sound
         this.artist.ListarArtistas().subscribe(function (posts) {
             _this.artistas = posts.topartists.artist;
             console.log(_this.artistas);
+        });
+        // Mongo db
+        this.artist.listarArtistasLocal().subscribe(function (posts) {
+            console.log('Array Local');
+            console.log(posts);
         });
     }
     ArtistasComponent.prototype.ngOnInit = function () {
@@ -492,10 +498,14 @@ var ArtistasService = /** @class */ (function () {
         this.http = http;
         // tslint:disable-next-line:max-line-length
         this.apiUrl = 'https://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=spain&api_key=d6c8cd5b2e080637e0f3c77eeb023bf5&format=json';
-        this.apiSound = '';
+        this.apiSound = 'http://localhost:3000/api';
+        this.artistas = [];
     }
     ArtistasService.prototype.ListarArtistas = function () {
         return this.http.get(this.apiUrl);
+    };
+    ArtistasService.prototype.listarArtistasLocal = function () {
+        return this.http.get(this.apiSound + '/artistas.json');
     };
     ArtistasService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({

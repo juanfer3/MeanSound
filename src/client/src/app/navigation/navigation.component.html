@@ -1,5 +1,9 @@
-<mat-toolbar color="primary">
+<mat-toolbar  class="my_navar">
   <span>My App</span>
+
+
+
+
   <span class="spacer"></span>
   <!--Button Menu-->
   <button mat-icon-button [matMenuTriggerFor]="menu">
@@ -7,14 +11,6 @@
   </button>
   <!--Menu-->
   <mat-menu #menu="matMenu" >
-    <button mat-menu-item>
-      <mat-icon>dialpad</mat-icon>
-      <span>Redial</span>
-    </button>
-    <button mat-menu-item disabled>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voicemail</span>
-    </button>
     
       <button mat-menu-item  >
         <mat-icon>alarm_off</mat-icon>
@@ -33,7 +29,7 @@
 
 
 <!-- Navegador -->
-<mat-tab-group >
+<mat-tab-group  >
   <!-- Link to Home -->
   <mat-tab >
 
@@ -48,14 +44,21 @@
       <button mat-button routerLink="/artistas" >Artistas</button>
     </ng-template>
   </mat-tab>
-  <!-- Link to Users id-->
-  <mat-tab >
-
-    <ng-template mat-tab-label >
-
-      <button mat-button >Login</button>
+  <!-- Link to Login-->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <button mat-button routerLink="/login" >Login</button>
     </ng-template>
   </mat-tab>
+
+  <!-- Link to Singup-->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <button mat-button routerLink="/singup" >Singup</button>
+    </ng-template>
+  </mat-tab>
+
+ 
 
 
 </mat-tab-group>

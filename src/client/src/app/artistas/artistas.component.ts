@@ -14,13 +14,23 @@ export class ArtistasComponent implements OnInit {
 
   constructor(private artist: ArtistasService) {
 
+    // Api Sound
     this.artist.ListarArtistas().subscribe(
       posts => {
         this.artistas = posts.topartists.artist
         console.log(this.artistas);
 
       }
-    )
+    );
+
+    // Mongo db
+    this.artist.listarArtistasLocal().subscribe(
+      posts => {
+        console.log('Array Local');
+        console.log(posts);
+      }
+    );
+
 
 
   }

@@ -34,6 +34,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ArtistasComponent } from './artistas/artistas.component';
 import { HomeComponent } from './home/home.component';
 import { PageNoFoundComponent } from './page-no-found/page-no-found.component';
+import { LoginComponent } from './login/login.component';
+import { SingupComponent } from './singup/singup.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { PageNoFoundComponent } from './page-no-found/page-no-found.component';
     NavigationComponent,
     HomeComponent,
     ArtistasComponent,
-    PageNoFoundComponent
+    PageNoFoundComponent,
+    LoginComponent,
+    SingupComponent
   ],
   imports: [
     BrowserModule,
