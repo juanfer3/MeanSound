@@ -9,6 +9,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+/* Firebase */
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+
+
 /* Routers */
 import { routing } from './app.routing';
 
@@ -28,6 +34,12 @@ import {
   MatSelectModule,
   MatGridListModule
 } from '@angular/material';
+
+// Servicios
+import { FirebaseAuthService } from './servicios/firebase-auth.service';
+import { ArtistasService } from './servicios/artistas.service';
+
+// Componentes
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -54,6 +66,8 @@ import { SingupComponent } from './singup/singup.component';
     HttpModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
     MatToolbarModule,
     MatTabsModule,
     MatButtonModule,
@@ -70,7 +84,7 @@ import { SingupComponent } from './singup/singup.component';
     routing
 
   ],
-  providers: [],
+  providers: [FirebaseAuthService, ArtistasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
