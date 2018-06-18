@@ -57,6 +57,7 @@ import { LoginComponent } from './login/login.component';
 import { SingupComponent } from './singup/singup.component';
 import { LoginFirebaseComponent } from './login-firebase/login-firebase.component';
 import { SignupFirebaseComponent } from './signup-firebase/signup-firebase.component';
+import { ArtistasDetailComponent } from './artistas-detail/artistas-detail.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { SignupFirebaseComponent } from './signup-firebase/signup-firebase.compo
     LoginComponent,
     SingupComponent,
     LoginFirebaseComponent,
-    SignupFirebaseComponent
+    SignupFirebaseComponent,
+    ArtistasDetailComponent
   ],
   imports: [
     BrowserModule,

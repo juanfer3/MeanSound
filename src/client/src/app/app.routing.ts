@@ -11,6 +11,7 @@ import { PageNoFoundComponent } from './page-no-found/page-no-found.component';
 import { ArtistasComponent } from './artistas/artistas.component';
 import { LoginComponent } from './login/login.component';
 import { SingupComponent } from './singup/singup.component';
+import { ArtistasDetailComponent } from './artistas-detail/artistas-detail.component';
 
 const App_Routes: Routes = [
   {
@@ -25,6 +26,9 @@ const App_Routes: Routes = [
   {
     path: 'artistas', component: ArtistasComponent,
     canActivate: [AuthMnGuard]
+  },
+  {
+    path: 'artistas/:id', component: ArtistasDetailComponent
   },
   { path: '**', component: PageNoFoundComponent }
 ];

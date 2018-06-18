@@ -26,4 +26,8 @@ export class ArtistasService {
     return this.http.get<any>(this.apiSound + '/artistas.json');
   }
 
+  getArtistasId(nombre: string) {
+    return this.http.get('http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist='+nombre+'&api_key=d6c8cd5b2e080637e0f3c77eeb023bf5&format=json');
+  }
+
 }
