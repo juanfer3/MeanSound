@@ -1,6 +1,12 @@
+
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FirebaseAuthService } from '../servicios/firebase-auth.service';
+// Servicios
+import { AuthMnService } from '../servicios/auth-mn.service';
+// Modelos
+import { User } from './../models/Users';
+// Component
 
 @Component({
   selector: 'app-singup',
@@ -9,10 +15,9 @@ import { FirebaseAuthService } from '../servicios/firebase-auth.service';
 })
 export class SingupComponent implements OnInit {
 
-  public email= "hoal";
-  public pass= "asdf";
 
-  constructor(private myFirebase: FirebaseAuthService) { }
+
+  constructor(private authUsers: AuthMnService) { }
 
   ngOnInit() {
   }
@@ -20,18 +25,18 @@ export class SingupComponent implements OnInit {
   createUser(form: NgForm) {
 
     console.log(form.value);
-    this.myFirebase.registrerUserFirebase(form.value.user, form.value.pass)
-      .then((res) => {
-        console.log('Good');
-        console.log(res);
 
+    const newUser: User = {
+      nombre: form.value.nombre,
+      email: form.value.email,
+      password: form.value.password
+    };
 
-      }).catch((err) => {
-        console.log('Error');
-        console.log(err);
-
-
-      })
+    this.authUsers.CreateUser(newUser)
+      .subscribe(user => {
+        console.log('Users Nuevo');
+        console.log(user);
+    });
 
   }
 

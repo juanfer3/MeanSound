@@ -9,14 +9,17 @@
     <form action="" class="center"  #loginForm="ngForm" (ngSubmit)="login(loginForm)">
         <h1>Login</h1>
       <div class="example-container">
-        <!--Input User-->
+
+        
+
+        <!--Input Email-->
         <mat-form-field>
-          <input matInput placeholder="User" name="user" id="user" ngModel>
+          <input matInput placeholder="Email" type="email" name="email" id="email" ngModel>
         </mat-form-field>
 
         <!--Input Password-->
         <mat-form-field>
-            <input matInput placeholder="Password" type="password" name="pass" id="pass" ngModel>
+            <input matInput placeholder="Password" type="password" name="password" id="pass" ngModel>
         </mat-form-field>
 
         

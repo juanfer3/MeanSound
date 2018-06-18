@@ -1,0 +1,28 @@
+
+<br>
+<br>
+
+<div class="main-div">
+
+    
+  
+    <form action="" class="center"  #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        <h1>Login Con FireBase</h1>
+      <div class="example-container">
+        <!--Input User-->
+        <mat-form-field>
+          <input matInput placeholder="Email" type="email" name="email" id="email" ngModel>
+        </mat-form-field>
+
+        <!--Input Password-->
+        <mat-form-field>
+            <input matInput placeholder="Password" type="password" name="pass" id="pass" ngModel>
+        </mat-form-field>
+
+        
+        <button mat-raised-button class="mybtn-login-gmail" type="submit">Login</button>
+
+      </div>
+    </form>
+
+  </div>

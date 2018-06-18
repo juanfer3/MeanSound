@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 
 const Users = Schema ({
     nombre: String,
+    email: String,
     password: String
 })
 

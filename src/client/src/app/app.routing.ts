@@ -1,6 +1,9 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule, CanDeactivate } from '@angular/router';
 
+/*Guards*/
+import { AuthFirebaseGuard } from './guards/auth-firebase.guard';
+import { AuthMnGuard } from './guards/auth-mn.guard';
 
 /*Modulos*/
 import { HomeComponent } from './home/home.component';
@@ -11,7 +14,7 @@ import { SingupComponent } from './singup/singup.component';
 
 const App_Routes: Routes = [
   {
-    path: 'home', component: HomeComponent,
+    path: '', component: HomeComponent,
   },
   {
     path: 'login', component: LoginComponent,
@@ -21,6 +24,7 @@ const App_Routes: Routes = [
   },
   {
     path: 'artistas', component: ArtistasComponent,
+    canActivate: [AuthMnGuard]
   },
   { path: '**', component: PageNoFoundComponent }
 ];

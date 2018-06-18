@@ -12,12 +12,12 @@
   <!--Menu-->
   <mat-menu #menu="matMenu" >
     
-      <button mat-menu-item  >
+      <button mat-menu-item (click)="Logout()" *ngIf="isLogin">
         <mat-icon>alarm_off</mat-icon>
         <span>Logout</span>
       </button>
 
-      <button mat-menu-item >
+      <button mat-menu-item *ngIf="!isLogin" routerLink="/login">
         <mat-icon>redeem</mat-icon>
         <span>Login</span>
       </button>
@@ -29,13 +29,13 @@
 
 
 <!-- Navegador -->
-<mat-tab-group  >
+<mat-tab-group  *ngIf="isLogin">
   <!-- Link to Home -->
   <mat-tab >
 
     <ng-template mat-tab-label >
 
-      <button mat-button routerLink="/home">Inicio</button>
+      <button mat-button routerLink="/">Inicio</button>
     </ng-template>
   </mat-tab>
   <!-- Link to User-->

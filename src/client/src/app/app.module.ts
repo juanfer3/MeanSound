@@ -1,5 +1,6 @@
 
 
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /* Firebase */
+import { AuthFirebaseGuard } from './guards/auth-firebase.guard';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
@@ -35,9 +37,14 @@ import {
   MatGridListModule
 } from '@angular/material';
 
+// Guards
+import { AuthMnGuard } from './guards/auth-mn.guard';
+
+
 // Servicios
 import { FirebaseAuthService } from './servicios/firebase-auth.service';
 import { ArtistasService } from './servicios/artistas.service';
+import { AuthMnService } from './servicios/auth-mn.service';
 
 // Componentes
 
@@ -48,6 +55,9 @@ import { HomeComponent } from './home/home.component';
 import { PageNoFoundComponent } from './page-no-found/page-no-found.component';
 import { LoginComponent } from './login/login.component';
 import { SingupComponent } from './singup/singup.component';
+import { LoginFirebaseComponent } from './login-firebase/login-firebase.component';
+import { SignupFirebaseComponent } from './signup-firebase/signup-firebase.component';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +67,9 @@ import { SingupComponent } from './singup/singup.component';
     ArtistasComponent,
     PageNoFoundComponent,
     LoginComponent,
-    SingupComponent
+    SingupComponent,
+    LoginFirebaseComponent,
+    SignupFirebaseComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +96,13 @@ import { SingupComponent } from './singup/singup.component';
     routing
 
   ],
-  providers: [FirebaseAuthService, ArtistasService],
+  providers: [
+    FirebaseAuthService,
+    ArtistasService,
+    AuthFirebaseGuard,
+    AuthMnService,
+    AuthMnGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
