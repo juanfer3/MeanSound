@@ -1,7 +1,43 @@
 .example-card {
-    max-width: 400px;
+    max-width: 100%;
   }
   
   .example-header-image {
     background-size: cover;
   }
+
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 95%;
+  }
+
+
+
+
+
+
+.mi-imagen-abajo-derecha{
+  position:absolute;
+  bottom:5px;
+  right:10px;
+}
+
+.my_btn_send {
+  background: green;
+}
+
+
+mat-chip {
+  max-width: 200px;
+}
+
+.contenedor_comment {
+  margin-bottom: 70%;
+  margin-right: 75% ;
+}

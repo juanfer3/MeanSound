@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 /* Firebase */
 import { AuthFirebaseGuard } from './guards/auth-firebase.guard';
 import { AngularFireModule } from 'angularfire2';
@@ -36,6 +38,8 @@ import {
   MatSelectModule,
   MatGridListModule
 } from '@angular/material';
+
+import {MatChipsModule} from '@angular/material/chips';
 
 // Guards
 import { AuthMnGuard } from './guards/auth-mn.guard';
@@ -80,6 +84,7 @@ import { ArtistasDetailComponent } from './artistas-detail/artistas-detail.compo
     HttpModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     MatToolbarModule,
@@ -95,6 +100,7 @@ import { ArtistasDetailComponent } from './artistas-detail/artistas-detail.compo
     MatFormFieldModule,
     MatSelectModule,
     MatGridListModule,
+    MatChipsModule,
     routing
 
   ],
